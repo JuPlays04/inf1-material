@@ -7,14 +7,15 @@ package aufgabe1
 // EvenPrefix erwartet eine Liste von Zahlen und liefert
 // die längste Anfangs-Folge, die nur gerade Zahlen enthält.
 // D.h. eine Liste mit allen geraden Zahlen vor der ersten ungeraden.
-func EvenPrefix(list []int) []int {
-	result := []int{}
-	for_, num := range list {
-		if num%2 == 0 {
-			result = append(result, num)
-		} else {
+func EvenPrefix(nums []int) []int {
+	peter := []int{}
+	for _, n := range nums {
+
+		if n%2 != 0 {
 			break
 		}
+		peter = append(peter, n)
 	}
-	return result
+
+	return peter
 }
