@@ -1,5 +1,7 @@
 package aufgabe1
 
+import "strings"
+
 /*
 AUFGABENSTELLUNG: Vervollständigen Sie die Funktion ShortestAbc.
 MAX. PUNKTE: 10
@@ -11,6 +13,15 @@ MAX. PUNKTE: 10
 //
 // Hinweis: Die Funktion muss nur mit kurzen Strings der Länge < 100 funktionieren.
 func ShortestAbc(list []string) string {
-	// TODO
-	return ""
+	shortest := ""
+
+	for _, peter := range list {
+		if strings.HasPrefix(peter, "abc") {
+			if shortest == "" || len(peter) < len(shortest) {
+				shortest = peter
+			}
+
+		}
+	}
+	return shortest
 }
